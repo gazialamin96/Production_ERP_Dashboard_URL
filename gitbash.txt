@@ -1,36 +1,39 @@
- echo 'this is file1 of my project' > gitbash.txt
-cat gitbash.txt ->it's for display the content of file 
-rm gitbash.txt -> it's for remove the file
-ls -> it's for list the file
-pwd -> it's for print the current directory
-mkdir -> it's for make directory
-rmdir -> it's for remove the directory
+# echo 'this is file1 of my project' > gitbash.txt
+# cat gitbash.txt ->it's for display the content of file 
+# rm gitbash.txt -> it's for remove the file
+# ls -> it's for list the file
+# pwd -> it's for print the current directory
+# mkdir -> it's for make directory
+# rmdir -> it's for remove the directory
 
 
 step: 1. git init
-step: 2. git status
 step: 2. git add .
+        # How to check git status -> git status
 step: 3. git commit -m "first commit"
+        # How to check git log -> git log
+        # How to check git branch -> git branch 
+        # How to create git branch -> git branch <branch_name>
+        # git switch branch
+                git switch <branch_name>
+                git checkout <branch_name>
 step: 4. git remote add origin https://github.com/yourusername/your-repo.git
+        # If not pushing to remote repository for fresh project then use this command: git push -u origin main --force or git push -f origin main
+ 
 step: 5. git push -u origin master
-step: 6. git branch -M main
 
-step: 7. git add .
-step: 8. git commit -m "Initial commit"
-step: 9. git remote add origin https://github.com/yourusername/your-repo.git
-step: 10. git push -u origin main
-
-# If not pushing to remote repository for fresh project then use this command: git push -u origin main --force or git push -f origin main
+-----------------------
+-----------------------
 
 # git go back to previous commit
 -> git checkout 
 step: 12. git reset --hard HEAD~1
 step: 13. git push -f origin main
 
-# git create branch
-git branch <branchname>
+-----------------------
+-----------------------
 
-# git switch branch
-step: 14. git switch <branch_name>
-step: 15. git checkout <branch_name>
+
+
+
 
