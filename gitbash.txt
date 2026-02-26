@@ -26,3 +26,11 @@ step: 10. git push -u origin main
 -> git checkout 
 step: 12. git reset --hard HEAD~1
 step: 13. git push -f origin main
+
+# git create branch
+git branch <branchname>
+
+# git switch branch
+step: 14. git switch <branch_name>
+step: 15. git checkout <branch_name>
+
