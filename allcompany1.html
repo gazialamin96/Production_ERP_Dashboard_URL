@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMTRANET GROUP DASHBOARD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="Amtranet_logo.jpeg" type="image/svg+xml">
+    <link rel="stylesheet" href="style/responsiveurl.css">
+    
+</head>
+<body>
+    <div class="container">
+    <div id="clock"></div>
+    <div style="display: flex; align-items: center;">
+        <h2 id="pageTitle" style="margin-right: 10px;"></h2>
+
+        <!-- Play/Pause Button -->
+        <button id="toggleBtn" title="Pause" 
+            style="background: none; border: none; cursor: pointer; font-size: 1.3em; 
+            background-color: rgb(254, 158, 41); color: #fff; padding: 5px; 
+            border-radius: 5px; display: flex; align-items: center; 
+            justify-content: center; transition: background-color 0.3s; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+            &#x23F8;
+        </button>
+
+        <!-- NEW NEXT BUTTON -->
+        <button id="nextBtn" title="Next Company"
+            style="margin-left: 10px; background: none; border: none; cursor: pointer; 
+            font-size: 1.3em; background-color: rgb(41, 158, 254); color: #fff; 
+            padding: 5px 10px; border-radius: 5px; display: flex; align-items: center; 
+            justify-content: center; transition: background-color 0.3s; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <!-- END NEXT BUTTON -->
+
+    </div>
+</div>
+
+<iframe id="contentFrame"></iframe>
+
+<script>
+    const urls = [
+        'http://203.202.247.83/production/reports/unit.php?url=Garments Export Village Ltd./',
+        'http://203.202.247.83/production/reports/unit.php?url=Amtranet Limited/',
+        'http://203.202.247.83/production/reports/unit.php?url=Bravo Apparel Manufacturer Ltd./'
+    ];
+
+    const titles = [
+        'Garments Export Village Limited',
+        'Amtranet Limited',
+        'Bravo Apparel Manufacturer Limited'
+    ];
+
+    let currentIndex = 0;
+    let intervalId = null;
+    let isPlaying = true;
+
+    function loadNextLink() {
+        document.getElementById('contentFrame').src = urls[currentIndex];
+        document.getElementById('pageTitle').innerText = titles[currentIndex];
+
+        currentIndex++;
+        if (currentIndex >= urls.length) currentIndex = 0;
+    }
+
+    function startAutoPlay() {
+        if (!intervalId) {
+            intervalId = setInterval(loadNextLink, 30000); // 30 seconds
+            isPlaying = true;
+            updateToggleBtn();
+        }
+    }
+
+    function stopAutoPlay() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+            isPlaying = false;
+            updateToggleBtn();
+        }
+    }
+
+    function updateToggleBtn() {
+        const btn = document.getElementById('toggleBtn');
+        if (isPlaying) {
+            btn.innerHTML = '&#x23F8;';  // Pause icon
+            btn.title = "Click for PUSH Rotations";
+        } else {
+            btn.innerHTML = '&#x25B6;';  // Play icon
+            btn.title = "Click for PLAY Rotations";
+        }
+    }
+
+    window.onload = function() {
+        loadNextLink();
+        startAutoPlay();
+    };
+
+    document.getElementById('toggleBtn').onclick = function() {
+        if (isPlaying) stopAutoPlay();
+        else startAutoPlay();
+    };
+
+    /* ? NEW — Manual Next Button Logic ? */
+    document.getElementById('nextBtn').onclick = function () {
+        loadNextLink();  // Just load next page
+    };
+
+    // Clock
+    function clock() {
+        const now = new Date();
+        const options = {
+            timeZone: 'Asia/Dhaka',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+        };
+        const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+        document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(clock, 1000);
+    clock();
+</script>
+</body>
+</html>

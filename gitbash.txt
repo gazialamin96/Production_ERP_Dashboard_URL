@@ -1,0 +1,20 @@
+ echo 'this is file1 of my project' > gitbash.txt
+cat gitbash.txt ->it's for display the content of file 
+rm gitbash.txt -> it's for remove the file
+ls -> it's for list the file
+pwd -> it's for print the current directory
+mkdir -> it's for make directory
+rmdir -> it's for remove the directory
+
+
+step: 1. git init
+step: 2. git status
+step: 2. git add .
+step: 3. git commit -m "first commit"
+step: 4. git remote add origin https://github.com/yourusername/your-repo.git
+step: 5. git push -u origin master
+step: 6. git branch -M main
+step: 7. git add .
+step: 8. git commit -m "Initial commit"
+step: 9. git remote add origin https://github.com/yourusername/your-repo.git
+step: 10. git push -u origin main

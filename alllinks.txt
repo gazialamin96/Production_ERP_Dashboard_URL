@@ -1,0 +1,29 @@
+GEVL DP->
+http://erp.amtranet.com/production/reports/unit.php?url=Garments%20Export%20Village%20Ltd./DP%20-%20Level%20-%204%20[Sewing]/
+
+GEVL PLP->
+http://203.202.247.83/production/reports/unit.php?url=Garments%20Export%20Village%20Ltd./PLP%20-%20Level%20-%205%20%5bSewing%5d/
+
+GEVL DS->
+http://erp.amtranet.com/production/reports/unit.php?url=Garments%20Export%20Village%20Ltd./DS%20-%20Level%20-%206%20%5bSewing%5d/
+
+GEVL CP->
+http://erp.amtranet.com/production/reports/unit.php?url=Garments%20Export%20Village%20Ltd./CP-%20Level%20-%207%20%5bSewing%5d/
+
+BAML DENIM ->
+http://erp.amtranet.com/production/reports/unit.php?url=Bravo%20Apparel%20Manufacturer%20Ltd./B.Denim%20%5bSewing%5d/
+
+BAML SHIRT ->
+http://erp.amtranet.com/production/reports/unit.php?url=Bravo%20Apparel%20Manufacturer%20Ltd./B.Shirt%20%5bSewing%5d/
+
+BAML PANT ->
+http://erp.amtranet.com/production/reports/unit.php?url=Bravo%20Apparel%20Manufacturer%20Ltd./B.Pant%20%5bSewing%5d/
+
+BAML JACKET ->
+http://erp.amtranet.com/production/reports/unit.php?url=Bravo%20Apparel%20Manufacturer%20Ltd./B.Blazer%20%5bSewing%5d/
+
+AMTL SHIRT-1 ->
+http://erp.amtranet.com/production/reports/unit.php?url=Amtranet%20Limited/Level%20-%207%20%5bSewing%5d/
+
+AMTL SHIRT-2 ->
+http://erp.amtranet.com/production/reports/unit.php?url=Amtranet%20Limited/Level%20-%208%20%5bSewing%5d/

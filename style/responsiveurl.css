@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(223, 254, 254);
+    color: #fff;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px; /* Adjust the height as needed */
+    flex-direction: column;
+}
+h1, h2 {
+    margin: 0;
+}
+h1 {
+    font-size: 2rem;
+    color: rgb(227, 11, 11);
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: tomato;
+}
+#clock {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: tomato;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    #clock {
+        font-size: 2rem;
+        position: absolute;
+        right: 0;
+        top: 5;
+        transform: translate(0, 50%);
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    #clock {
+        font-size: 2.5rem;
+    }
+}

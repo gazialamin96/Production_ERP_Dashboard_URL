@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEVL DS</title>
+    <link rel="shortcut icon" href="./Amtranet_logo.jpeg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- <script>
+        function autoRefresh() {
+            setInterval(function() {
+                location.reload();
+            }, 600000); // Refresh every 600000 milliseconds (10 minutes)
+        }
+
+        window.onload = function() {
+            autoRefresh();
+            
+        };
+    </script> -->
+    <script>
+        const urls = [
+            'http://erp.amtranet.com/production/reports/unit.php?url=Garments%20Export%20Village%20Ltd./DS%20-%20Level%20-%206%20%5bSewing%5d/'
+        ];
+
+        let currentIndex = 0;
+
+        function loadNextLink() {
+            if (currentIndex < urls.length) {
+                document.getElementById('contentFrame').src = urls[currentIndex];
+                console.log(`Loaded: ${urls[currentIndex]}`);
+                currentIndex++;
+                if (currentIndex >= urls.length) {
+                    currentIndex = 0;
+                }
+            }
+        }
+
+        window.onload = function() {
+            loadNextLink();
+            setInterval(loadNextLink, 120000);
+        };
+        //clock part start
+        function clock() {
+                const now = new Date();
+                const options = {
+                    timeZone: 'Asia/Dhaka',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric',
+                    hour12: true
+                };
+                const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+                document.getElementById('clock').textContent = timeString;
+            }
+
+            setInterval(clock, 1000);
+            clock(); // Initial call to display the clock immediately
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="clock"></div>
+        <h2>Garments Export Village Limited</h2>
+    </div>
+    
+    <iframe id="contentFrame"></iframe>
+    
+</body>
+</html>
