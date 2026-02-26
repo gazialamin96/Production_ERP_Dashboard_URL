@@ -14,7 +14,11 @@ step: 3. git commit -m "first commit"
 step: 4. git remote add origin https://github.com/yourusername/your-repo.git
 step: 5. git push -u origin master
 step: 6. git branch -M main
+
 step: 7. git add .
 step: 8. git commit -m "Initial commit"
 step: 9. git remote add origin https://github.com/yourusername/your-repo.git
 step: 10. git push -u origin main
+
+# If not pushing to remote repository for fresh project then use this command: git push -u origin main --force or git push -f origin main
+
